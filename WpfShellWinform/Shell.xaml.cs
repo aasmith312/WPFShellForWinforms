@@ -25,12 +25,11 @@ namespace WpfShellWinform
     /// <summary>
     /// Interaction logic for Shell.xaml
     /// </summary>
-    public partial class Shell : BaseWinformHostWindow
+    public partial class Shell : BaseWinformHostWindow<WinformToBeHosted>
     {
         public Shell(IUnityContainer container) : base(container)
         {
             InitializeComponent();
-            this.HostedType = typeof(WinformToBeHosted);
         }
     }
 }

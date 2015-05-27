@@ -1,7 +1,9 @@
-﻿<src:BaseWinformHostWindow x:Class="WpfShellWinform.Shell"
+﻿<src:BaseWinformHostWindow  x:Class="WpfShellWinform.Shell"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:src="clr-namespace:Common.UI.WPF;assembly=Common.UI.WPF"
+        xmlns:winform="clr-namespace:WinformToBeHosted2.Views;assembly=WinformToBeHosted2"
+        x:TypeArguments="winform:WinformToBeHosted"
         Title="MainWindow" Height="350" Width="525"
                 >
 </src:BaseWinformHostWindow>
