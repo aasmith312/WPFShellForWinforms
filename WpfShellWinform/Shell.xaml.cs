@@ -1,5 +1,4 @@
-﻿using Events;
-using Microsoft.Practices.Prism.PubSubEvents;
+﻿using Microsoft.Practices.Prism.PubSubEvents;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
@@ -18,42 +17,20 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WinformToBeHosted2.Views;
 using System.Runtime;
+using Common.UI.WPF;
+using System.Windows.Forms;
 
 namespace WpfShellWinform
 {
     /// <summary>
     /// Interaction logic for Shell.xaml
     /// </summary>
-    public partial class Shell : Window
+    public partial class Shell : BaseWinformHostWindow
     {
-        [Dependency]
-        public IUnityContainer Container { get; set; }
-
-        public Shell()
+        public Shell(IUnityContainer container) : base(container)
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            TestEvent t = this.Container.Resolve<IEventAggregator>().GetEvent<TestEvent>();
-            t.Subscribe(WinformAddedEventHandler, ThreadOption.UIThread, false, GoAhead);
-        }
-
-
-        public void WinformAddedEventHandler(String evnt)
-        {
-            IWinformToBeHosted Winform = this.Container.Resolve<IWinformToBeHosted>();
-            
-            WindowsFormsHost host = new WindowsFormsHost();
-            host.Child = Winform as System.Windows.Forms.Control;
-            
-            this.grid1.Children.Add(host);
-        }
-
-        public bool GoAhead(String evt)
-        {
-            return true;
+            this.HostedType = typeof(WinformToBeHosted);
         }
     }
 }

@@ -1,26 +1,33 @@
-﻿using Events;
+﻿using Common.UI;
+using Common.UI.WinForms;
 using Microsoft.Practices.Prism.PubSubEvents;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WinformToBeHosted2.Views
 {
-    public class WinformToBeHostedModel : IWinformToBeHostedModel
+    public class WinformToBeHostedModel : ViewModelBaseWinForm, IWinformToBeHostedModel
     {
-        IUnityContainer container;
+        String label = String.Empty;
 
-        public WinformToBeHostedModel(IUnityContainer container, IWinformToBeHosted WinformToBeHosted)
+        public String Label
         {
-            container.Resolve<IEventAggregator>().GetEvent<TestEvent>().Publish("Hello");
-
-            WinformToBeHosted.Model = this;
-            this.container = container;
+            get { return this.label; }
+            set 
+            {
+                this.Set(ref label, value);
+            }
         }
 
-
+        public WinformToBeHostedModel(IUnityContainer container) 
+            : base(container)
+        {
+            this.Label = "Hi From the Model.";
+        }
     }
 }

@@ -130,13 +130,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Events\Events.csproj">
-      <Project>{ea84243d-35f3-4c83-8ed1-c61f37279e0e}</Project>
-      <Name>Events</Name>
+    <ProjectReference Include="..\Common.UI.WinForms\Common.UI.WinForms.csproj">
+      <Project>{24a03048-d60f-413f-a6e5-c7aca9ec99ef}</Project>
+      <Name>Common.UI.WinForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WinformToBeHosted2\WinformToBeHosted2.csproj">
+    <ProjectReference Include="..\Common.UI.WPF\Common.UI.WPF.csproj">
+      <Project>{5a70d698-0505-4fe1-a457-80b5723bfa3b}</Project>
+      <Name>Common.UI.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinformToBeHosted2\WinformToBeHosted.csproj">
       <Project>{da9f58c3-4643-4b9d-898e-161787895c1d}</Project>
-      <Name>WinformToBeHosted2</Name>
+      <Name>WinformToBeHosted</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WinformToBeHosted2.Views;
 using System.Runtime;
+using System.Windows.Forms;
+using Common.UI.WPF;
 
 namespace WinformToBeHosted2
 {
@@ -23,10 +25,13 @@ namespace WinformToBeHosted2
         
         public void Initialize()
         {
-            iContainer.RegisterType<IWinformToBeHosted, WinformToBeHosted>();
             iContainer.RegisterType<IWinformToBeHostedModel, WinformToBeHostedModel>();
+            iContainer.RegisterType<IWinformToBeHosted, WinformToBeHosted>();
 
-            iContainer.Resolve<IWinformToBeHostedModel>();
+            IWinformToBeHosted tmp = iContainer.Resolve<IWinformToBeHosted>();
+
+            iContainer.Resolve<IEventAggregator>().GetEvent<WinformToBeAddedEvent>().Publish(
+                new WinformToBeAddedEventPayload() { Form = tmp as Form, ToValidate = typeof(WinformToBeHosted) });
         }
     }
 }
