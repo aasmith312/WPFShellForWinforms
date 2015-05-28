@@ -1,0 +1,9 @@
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Common.UI.WinForms.dll
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Common.UI.WinForms.pdb
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Common.UI.dll
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Microsoft.Practices.Unity.dll
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Common.UI.pdb
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\bin\Debug\Microsoft.Practices.Unity.xml
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\obj\Debug\Common.UI.WinForms.csprojResolveAssemblyReference.cache
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\obj\Debug\Common.UI.WinForms.dll
+C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI.WinForms\obj\Debug\Common.UI.WinForms.pdb

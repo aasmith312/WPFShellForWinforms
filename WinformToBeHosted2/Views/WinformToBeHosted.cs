@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common.UI.WinForms;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,19 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UnityExtensions;
 
 namespace WinformToBeHosted2.Views
 {
-    public partial class WinformToBeHosted : Form, IWinformToBeHosted
+    public partial class WinformToBeHosted : BaseWinform, IWinformToBeHosted
     {
-        public WinformToBeHosted()
-        {
-            InitializeComponent();
-            this.TopLevel = false;
-        }
-
-        //[ServiceDependencyAttribute]
+        [Dependency]
         public IWinformToBeHostedModel Model
         {
             get
@@ -31,5 +26,13 @@ namespace WinformToBeHosted2.Views
                 this.bindingSource1.DataSource = value;
             }
         }
+
+        public WinformToBeHosted()
+        {
+            InitializeComponent();
+            this.TopLevel = false;
+        }
+
+
     }
 }
