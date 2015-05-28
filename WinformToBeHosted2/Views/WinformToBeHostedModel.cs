@@ -27,7 +27,7 @@ namespace WinformToBeHosted2.Views
         public WinformToBeHostedModel(IUnityContainer container) 
             : base(container)
         {
-            this.Label = "Hi From the Model.";
+            this.Label = "Make it to Github, please.....";
         }
     }
 }
