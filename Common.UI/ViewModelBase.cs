@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Common.UI
 {
-    public class ViewModelBase :  INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         // This is a pre 4.5 way of performing this.
         //protected void Set<T>(ref T toBeSet, T value, String strToBeSet)
@@ -23,21 +23,20 @@ namespace Common.UI
         //}
 
         // This is 4.5 way of performing this.
-        protected void Set<T>(ref T toBeSet, T value, [CallerMemberName]String setterName = "")
+        // Notice that the validation check is not present.
+        // There isn't a need with the use of the CallerMemberName param attribute.
+        protected void Set<T>(ref T toBeSet, T value, [CallerMemberName]String propName = "")
         {
-            if (ViewModelHelper.PropertyExists(this, setterName))
-            {
-                toBeSet = (T)value;
-                NotifyPropertyChanged(setterName);
-            }
+            toBeSet = (T)value;
+            NotifyPropertyChanged(propName);
         }
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(String info)
+        protected void NotifyPropertyChanged(String propName)
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
     }

@@ -33,7 +33,7 @@ namespace Common.UI.WPF
 
         public virtual Boolean Validate(WinformToBeAddedEventPayload evt)
         {
-            return evt.ToValidate == typeof(T);
+            return evt.Form.GetType() == typeof(T);
         }
     }
 }

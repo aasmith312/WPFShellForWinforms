@@ -10,6 +10,5 @@ namespace Common.UI.WPF
     public class WinformToBeAddedEventPayload
     {
         public Form Form { get; set; }
-        public Type ToValidate { get; set; }
     }
 }

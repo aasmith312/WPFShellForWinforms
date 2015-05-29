@@ -31,7 +31,7 @@ namespace WinformToBeHosted2
             IWinformToBeHosted tmp = iContainer.Resolve<IWinformToBeHosted>();
 
             iContainer.Resolve<IEventAggregator>().GetEvent<WinformToBeAddedEvent>().Publish(
-                new WinformToBeAddedEventPayload() { Form = tmp as Form, ToValidate = typeof(WinformToBeHosted) });
+                new WinformToBeAddedEventPayload() { Form = tmp as Form });
         }
     }
 }

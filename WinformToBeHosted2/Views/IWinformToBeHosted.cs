@@ -8,6 +8,6 @@ namespace WinformToBeHosted2.Views
 {
     public interface IWinformToBeHosted
     {
-        IWinformToBeHostedModel Model { get; set; }
+        
     }
 }

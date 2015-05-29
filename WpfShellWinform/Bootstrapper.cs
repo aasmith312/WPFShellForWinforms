@@ -28,7 +28,6 @@ namespace WpfShellWinform
 
         protected override void ConfigureModuleCatalog()
         {
-
             base.ConfigureModuleCatalog();
 
             ModuleCatalog

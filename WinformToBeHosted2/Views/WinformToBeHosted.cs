@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace WinformToBeHosted2.Views
 {
-    public partial class WinformToBeHosted : BaseWinform, IWinformToBeHosted
+    public partial class WinformToBeHosted : BaseWinform, IWinformToBeHosted, IWinformViewModel<IWinformToBeHostedModel>
     {
         [Dependency]
-        public IWinformToBeHostedModel Model
+        public IWinformToBeHostedModel ViewModel
         {
             get
             {
@@ -27,10 +27,9 @@ namespace WinformToBeHosted2.Views
             }
         }
 
-        public WinformToBeHosted()
+        public WinformToBeHosted() : base()
         {
             InitializeComponent();
-            this.TopLevel = false;
         }
 
 

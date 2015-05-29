@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Common.UI.WinForms
 {
-    public abstract class BaseWinform : Form
+    public interface IWinformViewModel<Model>
     {
-        public BaseWinform()
-        {
-            this.TopLevel = false;
-        }
+        Model ViewModel { get; set; }
     }
 }
