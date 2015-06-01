@@ -2,3 +2,8 @@ C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI\bin\Debug\Common.UI.dll
 C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI\bin\Debug\Common.UI.pdb
 C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI\obj\Debug\Common.UI.dll
 C:\DevelopmentRoot\Projects\WpfShellWinform2\Common.UI\obj\Debug\Common.UI.pdb
+C:\DevelopmentRoot\Projects\Repo\WPFShellForWinforms\Common.UI\bin\Debug\Common.UI.dll
+C:\DevelopmentRoot\Projects\Repo\WPFShellForWinforms\Common.UI\bin\Debug\Common.UI.pdb
+C:\DevelopmentRoot\Projects\Repo\WPFShellForWinforms\Common.UI\obj\Debug\Common.UI.csprojResolveAssemblyReference.cache
+C:\DevelopmentRoot\Projects\Repo\WPFShellForWinforms\Common.UI\obj\Debug\Common.UI.dll
+C:\DevelopmentRoot\Projects\Repo\WPFShellForWinforms\Common.UI\obj\Debug\Common.UI.pdb

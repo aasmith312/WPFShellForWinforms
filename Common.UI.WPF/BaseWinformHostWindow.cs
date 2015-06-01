@@ -18,7 +18,15 @@ namespace Common.UI.WPF
         public Grid MainGrid = new Grid();
         public WindowsFormsHost Host = new WindowsFormsHost();
 
-        public BaseWinformHostWindow(IUnityContainer Container)
+        [Dependency]
+        public IUnityContainer Container
+        {
+            get;
+            set;
+        }
+
+
+        public BaseWinformHostWindow()
         {
             WinformToBeAddedEvent t = Container.Resolve<IEventAggregator>().GetEvent<WinformToBeAddedEvent>();
             t.Subscribe(WinformAddedEventHandler, ThreadOption.UIThread, false, Validate);

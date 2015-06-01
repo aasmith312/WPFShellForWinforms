@@ -27,7 +27,7 @@ namespace WpfShellWinform
     /// </summary>
     public partial class Shell : BaseWinformHostWindow<WinformToBeHosted>
     {
-        public Shell(IUnityContainer container) : base(container)
+        public Shell() : base()
         {
             InitializeComponent();
         }
